@@ -25,7 +25,8 @@ def outlier(data,method):
             outlier_upper = data> mean+3*std
             data[outlier_lower] = mean-3*std
             data[outlier_upper] = mean+3*std
-            
+            #print('Method: {}'.format(method))
+            return data
         elif method ==2:
             mean, std = data.mean(),data.std()# Creating mean and standard dev variables
 
@@ -34,7 +35,8 @@ def outlier(data,method):
             outlier_upper = data> mean+3*std
             data[outlier_lower] = mean
             data[outlier_upper] = mean
-            
+            #print('Method: {}'.format(method))
+            return data
         elif method == 3:
             # Creating mean and quartile variables
             mean= data.mean()
@@ -47,7 +49,8 @@ def outlier(data,method):
             outlier_upper = data> uq+iqr
             data[outlier_lower] = mean
             data[outlier_upper] = mean
-            
+            #print('Method: {}'.format(method))
+            return data
         elif method ==4:
             # Creating mean and quartile variables
             lq=data.quantile(0.25)
@@ -59,3 +62,5 @@ def outlier(data,method):
             outlier_upper = data> uq+iqr
             data[outlier_lower] = lq
             data[outlier_upper] = uq
+            #print('Method: {}'.format(method))
+            return data
