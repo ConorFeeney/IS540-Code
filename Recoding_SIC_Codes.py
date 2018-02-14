@@ -7,7 +7,7 @@
     """
 
 def Industry_Division(row):
-
+    # Recoding based on table in milestone report
     if row['I3']> 99 and row['I3']< 1000:
          return 'Agriculture, Forestry and Fishing'
     elif (row['I3']> 999 and row['I3']< 1500):
