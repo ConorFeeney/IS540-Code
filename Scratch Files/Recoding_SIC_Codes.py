@@ -1,33 +1,34 @@
+"""Code to recode the column I3 into industry level.
 
-def Industry_Division(row):
-     """Code to recode the column I3 into industry level.
-    
     Version Control:
     Initial coding
     ------------------------------------------
     Date 8-Feb-18, Author: Danielle Ezzo, Desc: Initial Coding
     """
-    if (row['I3']> 99 and row['I3']< 1000) :
-        return 'Agriculture, Forestry and Fishing'
+
+def Industry_Division(row):
+    # Recoding based on table in milestone report
+    if row['I3']> 99 and row['I3']< 1000:
+         return 'Agriculture, Forestry and Fishing'
     elif (row['I3']> 999 and row['I3']< 1500):
-        return  'Mining'
+         return  'Mining'
     elif (row['I3']> 1499 and row['I3']< 1800):
-        return 'Construction'
+         return 'Construction'
     elif (row['I3']> 1999 and row['I3']< 4000):
-        return 'Manufacturing'
+         return 'Manufacturing'
     elif (row['I3']> 3999 and row['I3']< 5000):
-        return 'Transportation, Communications, Electric, Gas and Sanitary service'
+         return 'Transportation, Communications, Electric, Gas and Sanitary service'
     elif (row['I3']> 4999 and row['I3']< 5200):
-        return 'Wholesale Trade'
+         return 'Wholesale Trade'
     elif (row['I3']> 5199 and row['I3']< 6000):
-        return 'Retail Trade'
+         return 'Retail Trade'
     elif (row['I3']> 5999 and row['I3']< 6800):
-        return 'Finance, Insurance and Real Estate'
+         return 'Finance, Insurance and Real Estate'
     elif (row['I3']> 6999 and row['I3']< 9000):
-        return 'Services'
+         return 'Services'
     elif (row['I3']> 9099 and row['I3']< 9730):
-        return 'Public Administration'
+         return 'Public Administration'
     elif (row['I3']> 9899 and row['I3']< 10000):
-        return 'Nonclassifiable'
+         return 'Nonclassifiable'
     else:
-        return 'Missing'
+         return 'Missing'

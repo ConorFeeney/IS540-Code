@@ -12,3 +12,6 @@ def standard(data,method):
         X_std = (data - data.min(axis=0)) / (data.max(axis=0) - data.min(axis=0))
         data = X_std * (1 - 0) + 0
         return data
+    elif method==2:
+        data = (data)/(10**len(str(int(max(data)))))
+        return data
