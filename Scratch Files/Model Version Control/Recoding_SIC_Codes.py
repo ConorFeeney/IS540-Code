@@ -9,26 +9,26 @@
 def Industry_Division(row):
     # Recoding based on table in milestone report
     if row['I3']> 99 and row['I3']< 1000:
-         return 'A'
+         return 'Agriculture, Forestry and Fishing'
     elif (row['I3']> 999 and row['I3']< 1500):
-         return  'B'
+         return  'Mining'
     elif (row['I3']> 1499 and row['I3']< 1800):
-         return 'C'
+         return 'Construction'
     elif (row['I3']> 1999 and row['I3']< 4000):
-         return 'D'
+         return 'Manufacturing'
     elif (row['I3']> 3999 and row['I3']< 5000):
-         return 'E'
+         return 'Transportation, Communications, Electric, Gas and Sanitary service'
     elif (row['I3']> 4999 and row['I3']< 5200):
-         return 'F'
+         return 'Wholesale Trade'
     elif (row['I3']> 5199 and row['I3']< 6000):
-         return 'G'
+         return 'Retail Trade'
     elif (row['I3']> 5999 and row['I3']< 6800):
-         return 'H'
+         return 'Finance, Insurance and Real Estate'
     elif (row['I3']> 6999 and row['I3']< 9000):
-         return 'I'
+         return 'Services'
     elif (row['I3']> 9099 and row['I3']< 9730):
-         return 'J'
+         return 'Public Administration'
     elif (row['I3']> 9899 and row['I3']< 10000):
-         return 'K'
+         return 'Nonclassifiable'
     else:
-         return 'L'
+         return 'Missing'
