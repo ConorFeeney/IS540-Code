@@ -1,3 +1,4 @@
+import scipy.stats as st
 def standard(data,method):
     """Standarising data using various methods.
     
@@ -14,4 +15,10 @@ def standard(data,method):
         return data
     elif method==2:
         data = (data)/(10**len(str(int(max(data)))))
+        return data
+    elif method ==3:
+        data = (data - data.mean(axis=0))/data.std(axis=0)
+        data=st.norm.cdf(data)
+        return data
+    elif method==4:
         return data
