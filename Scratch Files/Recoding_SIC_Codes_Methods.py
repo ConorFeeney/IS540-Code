@@ -6,7 +6,7 @@
     Date 8-Feb-18, Author: Danielle Ezzo, Desc: Initial Coding
     """
 
-def Industry_Division1(row,method):
+def Industry_Division(row,method):
     # Recoding based on table in milestone report
     if method==1:
         if (row['I3']> 99 and row['I3']< 1000):
