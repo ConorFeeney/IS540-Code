@@ -64,3 +64,5 @@ def outlier(data,method):
             data[outlier_upper] = uq
             #print('Method: {}'.format(method))
             return data
+        elif method==5:
+            return data
